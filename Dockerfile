@@ -22,7 +22,7 @@ RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Expone el puerto 8000
-EXPOSE 6000
+EXPOSE 6001
 
 # Comando por defecto para iniciar el servidor
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=6000"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=6001"]
